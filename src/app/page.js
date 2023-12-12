@@ -1,7 +1,8 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import SideBar from '@/app/layout/SideBar';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import TopBar from "@/app/layout/TopBar";
+import RootLayout from "@/app/layout";
 
 export default function Home() {
     const [theme, setTheme] = useState(null);
@@ -16,7 +17,7 @@ export default function Home() {
 
     return (
         <ThemeProvider theme={theme}>
-            <SideBar />
+            <RootLayout/>
         </ThemeProvider>
     );
 }
